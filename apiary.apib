@@ -1,0 +1,303 @@
+FORMAT: 1A
+HOST: http://polls.apiblueprint.org/
+
+# Alwan App
+
+
+## getContactData [/getContactData]
+### Getting Contact Data[GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getContactData
+
+    + Body
+
+                {
+                    "ID": 12,
+                    "Address": "ddddd",
+                    "Phone": "ddddd",
+                    "Fax": "ddddd",
+                    "Email": "ddddd",
+                    "Website": "ddddd",
+                    "LanguageID": 2
+                }
+
+
+## getGeneralData [/getGeneralData]
+### Getting The Lists Of The General Data[GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getGeneralData
+
+    + Body
+
+                {
+                    "language": [
+                        {
+                            "ID": 12,
+                            "Name": "بابابابابابااب"
+                        },
+                        {
+                            "ID": 12,
+                            "Name": "باباباباباباب"
+                        }
+                    ],
+                    "Country": [
+                        {
+                            "ID": 12,
+                            "Name": "باباباباباباباب",
+                            "LanguageID": 2
+                        },
+                        {
+                            "ID": 12,
+                            "Name": "باباباباباباباب",
+                            "LanguageID": 2
+                        },
+                    ],
+                    "City": [
+                        {
+                            "ID": 12,
+                            "Name": "باباباباباباباب",
+                            "CountryID": 2
+                        },
+                        {
+                            "ID": 12,
+                            "Name": "باباباباباباباب",
+                            "CountryID": 2
+                        },
+                    ]
+                }
+
+
+
+## getCalendarData [/getCalendarData/{yearNumber}]
+### Getting Calendar Data On Entry [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getCalendarData/2015
+
+    + Body
+
+                {
+                    "empty": false,
+                    "prayerTimes": [
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": "12:00 am",
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Noon": "12:00 am",
+                            "Afternoon": "12:00 am",
+                            "Sunset": "12:00 am",
+                            "Night": "12:00 am"
+                            "CityID": 2,
+                            "Year": "2015"
+                        },
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": 15,
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Noon": "12:00 am",
+                            "Afternoon": "12:00 am",
+                            "Sunset": "12:00 am",
+                            "Night": "12:00 am"
+                            "CityID": 2,
+                            "Year": "2015"
+                        }
+                    ],
+                    "ramadanTimes": [
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": 12,
+                            "RamadanDay": 16,
+                            "Alimseek": "12:00 am",
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Sunset": "12:00 am",
+                            "City": 2,
+                            "Year": "2015"
+                        },
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": 12,
+                            "RamadanDay": 16,
+                            "Alimseek": "12:00 am",
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Sunset": "12:00 am",
+                            "City": 2,
+                            "Year": "2015"
+                        }
+                    ]
+                }
+                
+
+## getActivities [/getActivities]
+### Getting Activities List [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getActivities
+
+    + Body
+
+                {
+                    "activitiesList": [
+                        {
+                            "ID": 12,
+                            "Title": "باباباباباباباب",
+                            "Location": "",
+                            "Details": "",
+                            "OnDate": "12/12/2012",
+                            "Image": "",
+                            "GalleryUrl": "",
+                            "LanguageID": 2
+                        },
+                        {
+                            "ID": 12,
+                            "Title": "باباباباباباباب",
+                            "Location": "",
+                            "Details": "",
+                            "OnDate": "12/12/2012",
+                            "Image": "",
+                            "GalleryUrl": "",
+                            "LanguageID": 2
+                        }
+                    ]
+                }
+                
+                
+## getFlashes [/getFlashes]
+### Getting Flashes List [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getFlashes
+
+    + Body
+
+                {
+                    "flashesList": [
+                        {
+                            "ID": 12,
+                            "Title": "باباباباباباباب",
+                            "File": "",
+                            "LanguageID": 2
+                        },
+                                                {
+                            "ID": 12,
+                            "Title": "باباباباباباباب",
+                            "File": "",
+                            "LanguageID": 2
+                        }
+                    ]
+                }
+                
+                
+                
+## getReleases [/getReleases]
+### Getting Releases List [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getReleases
+
+    + Body
+
+                {
+                    "releasesList": [
+                        {
+                            "ID": 12,
+                            "Title": "باباباباباباباب",
+                            "Details": "",
+                            "Image": "",
+                            "RFile": "",
+                            "LanguageID": 2
+                        },
+                        {
+                            "ID": 12,
+                            "Title": "باباباباباباباب",
+                            "Details": "",
+                            "Image": "",
+                            "RFile": "",
+                            "LanguageID": 2
+                        }
+                    ]
+                }
+                
+                
+## getDonationData [/getDonationData]
+### Getting Donation Data [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getDonationData
+
+    + Body
+
+                {
+                    {
+                        "ID": 12,
+                        "Text": "باباباباباباباب",
+                        "DonateUrl": "",
+                        "LanguageID": 2
+                    }
+                }
+                
+
+## getMails [/getMails]
+### Getting The Two Mail Lists [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getMails
+
+    + Body
+
+                {
+                    "mailReceivers": [
+                        {
+                            "ID": 12,
+                            "Email": "بابابابابابااب"
+                        },
+                        {
+                            "ID": 12,
+                            "Email": "باباباباباباب"
+                        }
+                    ],
+                    "mailCC": [
+                        {
+                            "ID": 12,
+                            "Email": "باباباباباباباب"
+                        },
+                        {
+                            "ID": 12,
+                            "Email": "باباباباباباباب"
+                        }
+                    ]
+                }
+                
