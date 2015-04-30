@@ -4,37 +4,25 @@ HOST: http://polls.apiblueprint.org/
 # Alwan App
 
 
-## getContactData [/getContactData]
+## getContactData [/getContactData/{LanguageID}]
 ### Getting Contact Data[GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getContactData
+            Location: /getContactData/2
 
     + Body
 
-                [
-                    {
-                        "ID": 12,
-                        "Address": "ddddd",
-                        "Phone": "ddddd",
-                        "Fax": "ddddd",
-                        "Email": "ddddd",
-                        "Website": "ddddd",
-                        "LanguageID": 2
-                    },
-                    {
-                        "ID": 12,
-                        "Address": "ddddd",
-                        "Phone": "ddddd",
-                        "Fax": "ddddd",
-                        "Email": "ddddd",
-                        "Website": "ddddd",
-                        "LanguageID": 2
-                    }
-                ]
+                {
+                    "ID": 12,
+                    "Address": "ddddd",
+                    "Phone": "ddddd",
+                    "Fax": "ddddd",
+                    "Email": "ddddd",
+                    "Website": "ddddd"
+                }
 
 
 ## getGeneralData [/getGeneralData]
@@ -61,40 +49,32 @@ HOST: http://polls.apiblueprint.org/
                     ],
                     "Country": [
                         {
-                            "ID": 12,
-                            "Name": "باباباباباباباب",
-                            "LanguageID": 2
+                            "CountryID": 12,
+                            "CountryName": "باباباباباباباب",
+                            "LanguageID": 2,
+                            "CityID": 12,
+                            "CityName": "بابابابابابا
                         },
                         {
-                            "ID": 12,
-                            "Name": "باباباباباباباب",
-                            "LanguageID": 2
-                        },
-                    ],
-                    "City": [
-                        {
-                            "ID": 12,
-                            "Name": "باباباباباباباب",
-                            "CountryID": 2
-                        },
-                        {
-                            "ID": 12,
-                            "Name": "باباباباباباباب",
-                            "CountryID": 2
-                        },
+                            "CountryID": 12,
+                            "CountryName": "باباباباباباباب",
+                            "LanguageID": 2,
+                            "CityID": 12,
+                            "CityName": "بابابابابابا
+                        }
                     ]
                 }
 
 
 
-## getCalendarData [/getCalendarData/{yearNumber}]
+## getCalendarData [/getCalendarData/{yearNumber}/{CityID}]
 ### Getting Calendar Data On Entry [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getCalendarData/2015
+            Location: /getCalendarData/2015/2
 
     + Body
 
@@ -109,9 +89,7 @@ HOST: http://polls.apiblueprint.org/
                             "Noon": "12:00 am",
                             "Afternoon": "12:00 am",
                             "Sunset": "12:00 am",
-                            "Night": "12:00 am",
-                            "CityID": 2,
-                            "Year": "2015"
+                            "Night": "12:00 am"
                         },
                         {
                             "ID": 12,
@@ -122,9 +100,7 @@ HOST: http://polls.apiblueprint.org/
                             "Noon": "12:00 am",
                             "Afternoon": "12:00 am",
                             "Sunset": "12:00 am",
-                            "Night": "12:00 am",
-                            "CityID": 2,
-                            "Year": "2015"
+                            "Night": "12:00 am"
                         }
                     ],
                     "ramadanTimes": [
@@ -136,9 +112,7 @@ HOST: http://polls.apiblueprint.org/
                             "Alimseek": "12:00 am",
                             "Dawn": "12:00 am",
                             "Sunrise": "12:00 am",
-                            "Sunset": "12:00 am",
-                            "City": 2,
-                            "Year": "2015"
+                            "Sunset": "12:00 am"
                         },
                         {
                             "ID": 12,
@@ -148,22 +122,20 @@ HOST: http://polls.apiblueprint.org/
                             "Alimseek": "12:00 am",
                             "Dawn": "12:00 am",
                             "Sunrise": "12:00 am",
-                            "Sunset": "12:00 am",
-                            "City": 2,
-                            "Year": "2015"
+                            "Sunset": "12:00 am"
                         }
                     ]
                 }
                 
 
-## getActivities [/getActivities]
+## getActivities [/getActivities/{LanguageID}]
 ### Getting Activities List [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getActivities
+            Location: /getActivities/2
 
     + Body
 
@@ -175,8 +147,7 @@ HOST: http://polls.apiblueprint.org/
                         "Details": "",
                         "OnDate": "12/12/2012",
                         "Image": "",
-                        "GalleryUrl": "",
-                        "LanguageID": 2
+                        "GalleryUrl": ""
                     },
                     {
                         "ID": 12,
@@ -185,21 +156,20 @@ HOST: http://polls.apiblueprint.org/
                         "Details": "",
                         "OnDate": "12/12/2012",
                         "Image": "",
-                        "GalleryUrl": "",
-                        "LanguageID": 2
+                        "GalleryUrl": ""
                     }
                 ]
                 
                 
                 
-## getFlashes [/getFlashes]
+## getFlashes [/getFlashes/{LanguageID}]
 ### Getting Flashes List [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getFlashes
+            Location: /getFlashes/2
 
     + Body
 
@@ -207,27 +177,25 @@ HOST: http://polls.apiblueprint.org/
                     {
                         "ID": 12,
                         "Tile": "باباباباباباباب",
-                        "File": "",
-                        "LanguageID": 2
+                        "File": ""
                     },
                     {
                         "ID": 12,
                         "Title": "باباباباباباباب",
-                        "File": "",
-                        "LanguageID": 2
+                        "File": ""
                     }
                 ]
                 
                 
                 
-## getReleases [/getReleases]
+## getReleases [/getReleases/{LanguageID}]
 ### Getting Releases List [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getReleases
+            Location: /getReleases/2
 
     + Body
 
@@ -237,46 +205,36 @@ HOST: http://polls.apiblueprint.org/
                         "Title": "باباباباباباباب",
                         "Details": "",
                         "Image": "",
-                        "RFile": "",
-                        "LanguageID": 2
+                        "RFile": ""
                     },
                     {
                         "ID": 12,
                         "Title": "باباباباباباباب",
                         "Details": "",
                         "Image": "",
-                        "RFile": "",
-                        "LanguageID": 2
+                        "RFile": ""
                     }
                 ]
 
                 
                 
-## getDonationData [/getDonationData]
+## getDonationData [/getDonationData/{LanguageID}]
 ### Getting Donation Data [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getDonationData
+            Location: /getDonationData/2
 
     + Body
 
-                [
-                    {
-                        "ID": 12,
-                        "Text": "باباباباباباباب",
-                        "DonateUrl": "",
-                        "LanguageID": 2
-                    },
-                    {
-                        "ID": 12,
-                        "Text": "باباباباباباباب",
-                        "DonateUrl": "",
-                        "LanguageID": 2
-                    }
-                ]
+                {
+                    "ID": 12,
+                    "Text": "باباباباباباباب",
+                    "DonateUrl": "",
+                    "LanguageID": 2
+                }
                 
 
 ## getMails [/getMails]
