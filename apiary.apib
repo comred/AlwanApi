@@ -25,14 +25,14 @@ HOST: http://polls.apiblueprint.org/
                 }
 
 
-## getGeneralData [/getGeneralData]
-### Getting The Lists Of The General Data[GET]
+## getLanguages [/getLanguages]
+### Getting The list of languages available
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getGeneralData
+            Location: /getLanguages
 
     + Body
 
@@ -46,25 +46,44 @@ HOST: http://polls.apiblueprint.org/
                             "ID": 12,
                             "Name": "باباباباباباب"
                         }
-                    ],
-                    "Country": [
-                        {
-                            "CountryID": 12,
-                            "CountryName": "باباباباباباباب",
-                            "LanguageID": 2,
-                            "CityID": 12,
-                            "CityName": "بابابابابابا
-                        },
-                        {
-                            "CountryID": 12,
-                            "CountryName": "باباباباباباباب",
-                            "LanguageID": 2,
-                            "CityID": 12,
-                            "CityName": "بابابابابابا
-                        }
                     ]
                 }
 
+
+
+## getCountries [/getCountries/{LanguageID}]
+### Getting The list of countries
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getCountries/2
+
+    + Body
+
+                [
+                    {
+                        "CountryID": 12,
+                        "CountryName": "باباباباباباباب",
+                        "Cities": [
+                            {
+                                "CityID": 12,
+                                "CityName": "باباباباباباباب"
+                            }
+                        ]
+                    },
+                    {
+                        "CountryID": 12,
+                        "CountryName": "باباباباباباباب",
+                        "Cities": [
+                            {
+                                "CityID": 12,
+                                "CityName": "باباباباباباباب"
+                            }
+                        ]
+                    }
+                ]
 
 
 ## getCalendarData [/getCalendarData/{CityID}/{yearNumber}]
