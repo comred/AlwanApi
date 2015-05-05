@@ -4,27 +4,6 @@ HOST: http://polls.apiblueprint.org/
 # Alwan App
 
 
-## getContactData [/getContactData/{LanguageID}]
-### Getting Contact Data[GET]
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getContactData/2
-
-    + Body
-
-                {
-                    "ID": 12,
-                    "Address": "ddddd",
-                    "Phone": "ddddd",
-                    "Fax": "ddddd",
-                    "Email": "ddddd",
-                    "Website": "ddddd"
-                }
-
-
 ## getLanguages [/getLanguages]
 ### Getting The list of languages available
 
@@ -145,115 +124,6 @@ HOST: http://polls.apiblueprint.org/
                 }
                 
 
-## getActivities [/getActivities/{LanguageID}]
-### Getting Activities List [GET]
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getActivities/2
-
-    + Body
-
-                [
-                    {
-                        "ID": 12,
-                        "Title": "باباباباباباباب",
-                        "Location": "",
-                        "Details": "",
-                        "OnDate": "12/12/2012",
-                        "Image": "",
-                        "GalleryUrl": ""
-                    },
-                    {
-                        "ID": 12,
-                        "Title": "باباباباباباباب",
-                        "Location": "",
-                        "Details": "",
-                        "OnDate": "12/12/2012",
-                        "Image": "",
-                        "GalleryUrl": ""
-                    }
-                ]
-                
-                
-                
-## getFlashes [/getFlashes/{LanguageID}]
-### Getting Flashes List [GET]
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getFlashes/2
-
-    + Body
-
-                [
-                    {
-                        "ID": 12,
-                        "Tile": "باباباباباباباب",
-                        "File": ""
-                    },
-                    {
-                        "ID": 12,
-                        "Title": "باباباباباباباب",
-                        "File": ""
-                    }
-                ]
-                
-                
-                
-## getReleases [/getReleases/{LanguageID}]
-### Getting Releases List [GET]
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getReleases/2
-
-    + Body
-
-                [
-                    {
-                        "ID": 12,
-                        "Title": "باباباباباباباب",
-                        "Details": "",
-                        "Image": "",
-                        "RFile": ""
-                    },
-                    {
-                        "ID": 12,
-                        "Title": "باباباباباباباب",
-                        "Details": "",
-                        "Image": "",
-                        "RFile": ""
-                    }
-                ]
-
-                
-                
-## getDonationData [/getDonationData/{LanguageID}]
-### Getting Donation Data [GET]
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getDonationData/2
-
-    + Body
-
-                {
-                    "ID": 12,
-                    "Text": "باباباباباباباب",
-                    "DonateUrl": "",
-                    "LanguageID": 2
-                }
-                
-
 ## getMails [/getMails]
 ### Getting The Two Mail Lists [GET]
 
@@ -287,4 +157,128 @@ HOST: http://polls.apiblueprint.org/
                         }
                     ]
                 }
+                
+                
+## getFullData [/getFullData/{LanguageID}/{YearNumber}]
+### Getting The Full Data Related to the Language and Year [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getFullData/2/2015
+
+    + Body   
+                
+                
+            {
+                "activities": [
+                    {
+                      "id": 7,
+                      "title": "فيغت",
+                      "location": "غعت",
+                      "details": "غفت",
+                      "onDate": "4/1/2015",
+                      "image": "635654939651575605.jpg",
+                      "galleryUrl": "فيغت"
+                    },
+                    {
+                      "id": 9,
+                      "title": "ggg",
+                      "location": "ggg",
+                      "details": "ggg",
+                      "onDate": "4/13/2015",
+                      "image": "635657324214026240.jpg",
+                      "galleryUrl": "ggg"
+                    },
+                    {
+                      "id": 10,
+                      "title": "f",
+                      "location": "fff",
+                      "details": "f",
+                      "onDate": "4/6/2015",
+                      "image": "635657323398604722.jpg",
+                      "galleryUrl": "f"
+                    }
+                ],
+                "flashes": [
+                    {
+                      "id": 1,
+                      "title": "erg",
+                      "file": "635657334565110206.wav"
+                    },
+                    {
+                      "id": 12,
+                      "title": "ghh",
+                      "file": "635657330475471426.mp4"
+                    }
+                ],
+                "releases": [
+                    {
+                      "id": 10,
+                      "title": "rttg",
+                      "details": "hhh",
+                      "image": "635657362167254147.png",
+                      "rFile": "635657362028571226.pdf"
+                    },
+                    {
+                      "id": 14,
+                      "title": "vvvv",
+                      "details": "vvvv",
+                      "image": "635660014417168613.png",
+                      "rFile": "635660014205868972.pdf"
+                    }
+                ],
+                "donationData": {
+                    "id": 0,
+                    "text": null,
+                    "donateUrl": null
+                },
+                "contactData": {
+                    "id": 0,
+                    "address": null,
+                    "phone": null,
+                    "fax": null,
+                    "email": null,
+                    "website": null
+                },
+                "prayerTimes": [
+                    {
+                        "ID": 12,
+                        "DayName": "ألاثنين",
+                        "Day": "12:00 am",
+                        "Dawn": "12:00 am",
+                        "Sunrise": "12:00 am",
+                        "Noon": "12:00 am",
+                        "Afternoon": "12:00 am",
+                        "Sunset": "12:00 am",
+                        "Night": "12:00 am"
+                    },
+                    {
+                        "ID": 12,
+                        "DayName": "ألاثنين",
+                        "Day": "12:00 am",
+                        "Dawn": "12:00 am",
+                        "Sunrise": "12:00 am",
+                        "Noon": "12:00 am",
+                        "Afternoon": "12:00 am",
+                        "Sunset": "12:00 am",
+                        "Night": "12:00 am"
+                    }
+                ],
+                "ramadanTimes": [
+                    {
+                        "ID": 12,
+                        "DayName": "ألاثنين",
+                        "Day": 12,
+                        "RamadanDay": 16,
+                        "Alimseek": "12:00 am",
+                        "Dawn": "12:00 am",
+                        "Sunrise": "12:00 am",
+                        "Sunset": "12:00 am"
+                    }
+                ]
+            }
+                
+                
                 
