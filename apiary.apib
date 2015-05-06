@@ -4,65 +4,6 @@ HOST: http://polls.apiblueprint.org/
 # Alwan App
 
 
-## getLanguages [/getLanguages]
-### Getting The list of languages available
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getLanguages
-
-    + Body
-
-                [
-                    {
-                        "ID": 12,
-                        "Name": "بابابابابابااب"
-                    },
-                    {
-                        "ID": 12,
-                        "Name": "باباباباباباب"
-                    }
-                ]
-
-
-
-## getCountries [/getCountries/{LanguageID}]
-### Getting The list of countries
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getCountries/2
-
-    + Body
-
-                [
-                    {
-                        "CountryID": 12,
-                        "CountryName": "باباباباباباباب",
-                        "City": [
-                            {
-                                "CityID": 12,
-                                "CityName": "باباباباباباباب"
-                            }
-                        ]
-                    },
-                    {
-                        "CountryID": 12,
-                        "CountryName": "باباباباباباباب",
-                        "City": [
-                            {
-                                "CityID": 12,
-                                "CityName": "باباباباباباباب"
-                            }
-                        ]
-                    }
-                ]
-
-
 ## getCalendarData [/getCalendarData/{CityID}/{yearNumber}]
 ### Getting Calendar Data On Entry [GET]
 
@@ -123,40 +64,6 @@ HOST: http://polls.apiblueprint.org/
                     ]
                 }
                 
-
-## getMails [/getMails]
-### Getting The Two Mail Lists [GET]
-
-+ Response 202 (application/json)
-
-    + Headers
-
-            Location: /getMails
-
-    + Body
-
-                {
-                    "mailReceivers": [
-                        {
-                            "ID": 12,
-                            "Email": "بابابابابابااب"
-                        },
-                        {
-                            "ID": 12,
-                            "Email": "باباباباباباب"
-                        }
-                    ],
-                    "mailCC": [
-                        {
-                            "ID": 12,
-                            "Email": "باباباباباباباب"
-                        },
-                        {
-                            "ID": 12,
-                            "Email": "باباباباباباباب"
-                        }
-                    ]
-                }
                 
                 
 ## getFullData [/getFullData/{LanguageID}/{YearNumber}]
