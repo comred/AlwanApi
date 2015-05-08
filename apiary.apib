@@ -4,66 +4,62 @@ HOST: http://polls.apiblueprint.org/
 # Alwan App
 
 
-## getCalendarData [/getCalendarData/{CityID}/{yearNumber}]
-### Getting Calendar Data On Entry [GET]
+
+## getInit [/getInit]
+### Getting Beginning Data[GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getCalendarData/2015/2
+            Location: /getInit
 
     + Body
 
                 {
-                    "prayerTimes": [
+                    "CityList":     [
                         {
-                            "ID": 12,
-                            "DayName": "ألاثنين",
-                            "Day": "12:00 am",
-                            "Dawn": "12:00 am",
-                            "Sunrise": "12:00 am",
-                            "Noon": "12:00 am",
-                            "Afternoon": "12:00 am",
-                            "Sunset": "12:00 am",
-                            "Night": "12:00 am"
+                            "CityID": 12,
+                            "GermanName": "ggggg",
+                            "ArabicName": "بببببب"
                         },
                         {
-                            "ID": 12,
-                            "DayName": "ألاثنين",
-                            "Day": 15,
-                            "Dawn": "12:00 am",
-                            "Sunrise": "12:00 am",
-                            "Noon": "12:00 am",
-                            "Afternoon": "12:00 am",
-                            "Sunset": "12:00 am",
-                            "Night": "12:00 am"
+                            "CityID": 12,
+                            "GermanName": "ggggg",
+                            "ArabicName": "بببببب"
                         }
                     ],
-                    "ramadanTimes": [
+                   "LanguageList":  [
                         {
                             "ID": 12,
-                            "DayName": "ألاثنين",
-                            "Day": 12,
-                            "RamadanDay": 16,
-                            "Alimseek": "12:00 am",
-                            "Dawn": "12:00 am",
-                            "Sunrise": "12:00 am",
-                            "Sunset": "12:00 am"
+                            "Language": "بابابابابابااب"
                         },
                         {
                             "ID": 12,
-                            "DayName": "ألاثنين",
-                            "Day": 12,
-                            "RamadanDay": 16,
-                            "Alimseek": "12:00 am",
-                            "Dawn": "12:00 am",
-                            "Sunrise": "12:00 am",
-                            "Sunset": "12:00 am"
+                            "Language": "باباباباباباب"
+                        }
+                    ],
+                    "MailReceivers": [
+                        {
+                            "ID": 12,
+                            "Email": "بابابابابابااب"
+                        },
+                        {
+                            "ID": 12,
+                            "Email": "باباباباباباب"
+                        }
+                    ],
+                    "MailCC": [
+                        {
+                            "ID": 12,
+                            "Email": "باباباباباباباب"
+                        },
+                        {
+                            "ID": 12,
+                            "Email": "باباباباباباباب"
                         }
                     ]
                 }
-                
                 
                 
 ## getFullData [/getFullData/{LanguageID}/{YearNumber}]
@@ -150,6 +146,67 @@ HOST: http://polls.apiblueprint.org/
                     "website": null
                 }
             }
+            
+            
+## getCalendarData [/getCalendarData/{CityID}/{yearNumber}]
+### Getting Calendar Data On Entry [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getCalendarData/2015/2
+
+    + Body
+
+                {
+                    "prayerTimes": [
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": "12:00 am",
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Noon": "12:00 am",
+                            "Afternoon": "12:00 am",
+                            "Sunset": "12:00 am",
+                            "Night": "12:00 am"
+                        },
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": 15,
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Noon": "12:00 am",
+                            "Afternoon": "12:00 am",
+                            "Sunset": "12:00 am",
+                            "Night": "12:00 am"
+                        }
+                    ],
+                    "ramadanTimes": [
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": 12,
+                            "RamadanDay": 16,
+                            "Alimseek": "12:00 am",
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Sunset": "12:00 am"
+                        },
+                        {
+                            "ID": 12,
+                            "DayName": "ألاثنين",
+                            "Day": 12,
+                            "RamadanDay": 16,
+                            "Alimseek": "12:00 am",
+                            "Dawn": "12:00 am",
+                            "Sunrise": "12:00 am",
+                            "Sunset": "12:00 am"
+                        }
+                    ]
+                }
                 
                 
                 
