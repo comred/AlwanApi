@@ -148,65 +148,39 @@ HOST: http://polls.apiblueprint.org/
             }
             
             
-## getCalendarData [/getCalendarData/{CityID}/{yearNumber}]
-### Getting Calendar Data On Entry [GET]
+## getPrayerTimes [/getPrayerTimes/{yearNumber}/{CityID}]
+### Getting Prayer Times [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getCalendarData/2015/2
+            Location: /getPrayerTimes/2015/9
 
     + Body
 
+
                 {
-                    "prayerTimes": [
-                        {
-                            "id": 12,
-                            "dayName": "ألاثنين",
-                            "day": "12:00 am",
-                            "dawn": "12:00 am",
-                            "sunrise": "12:00 am",
-                            "noon": "12:00 am",
-                            "afternoon": "12:00 am",
-                            "sunset": "12:00 am",
-                            "night": "12:00 am"
-                        },
-                        {
-                            "id": 12,
-                            "dayName": "ألاثنين",
-                            "day": "12:00 am",
-                            "dawn": "12:00 am",
-                            "sunrise": "12:00 am",
-                            "noon": "12:00 am",
-                            "afternoon": "12:00 am",
-                            "sunset": "12:00 am",
-                            "night": "12:00 am"
-                        }
-                    ],
-                    "ramadanTimes": [
-                        {
-                            "id": 12,
-                            "dayName": "ألاثنين",
-                            "day": 12,
-                            "ramadanDay": 16,
-                            "alimseek": "12:00 am",
-                            "dawn": "12:00 am",
-                            "sunrise": "12:00 am",
-                            "sunset": "12:00 am"
-                        },
-                        {
-                            "id": 12,
-                            "dayName": "ألاثنين",
-                            "day": 12,
-                            "ramadanDay": 16,
-                            "alimseek": "12:00 am",
-                            "dawn": "12:00 am",
-                            "sunrise": "12:00 am",
-                            "sunset": "12:00 am"
-                        }
-                    ]
+                    "id": 12,,
+                    "day": "4/13/2015",
+                    "dawn": "12:00 am",
+                    "sunrise": "12:00 am",
+                    "noon": "12:00 am",
+                    "afternoon": "12:00 am",
+                    "sunset": "12:00 am",
+                    "night": "12:00 am"
+                },
+                {
+                    "id": 12,
+                    "day": "4/13/2015",
+                    "dawn": "12:00 am",
+                    "sunrise": "12:00 am",
+                    "noon": "12:00 am",
+                    "afternoon": "12:00 am",
+                    "sunset": "12:00 am",
+                    "night": "12:00 am"
                 }
+
                 
                 
                 
