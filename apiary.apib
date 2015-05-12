@@ -148,7 +148,7 @@ HOST: http://polls.apiblueprint.org/
             }
             
             
-## getPrayerTimes [/getPrayerTimes/{yearNumber}/{CityID}]
+## getPrayerTimes [/getPrayerTimes/{yearNumber}/{cityId}/{monthId}]
 ### Getting Prayer Times [GET]
 
 + Response 202 (application/json)
@@ -182,5 +182,38 @@ HOST: http://polls.apiblueprint.org/
                 }
 
                 
-                
+## getRamadanTimes [/getRamadanTimes/{yearNumber}/{CityID}]
+### Getting Ramadan Times [GET]
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /getRamadanTimes/2015/9
+
+    + Body
+
+
+                {
+                    "id": 12,,
+                    "day": "4/13/2015",
+                    "dawn": "12:00 am",
+                    "sunrise": "12:00 am",
+                    "noon": "12:00 am",
+                    "afternoon": "12:00 am",
+                    "sunset": "12:00 am",
+                    "night": "12:00 am"
+                },
+                {
+                    "id": 12,
+                    "day": "4/13/2015",
+                    "dawn": "12:00 am",
+                    "sunrise": "12:00 am",
+                    "noon": "12:00 am",
+                    "afternoon": "12:00 am",
+                    "sunset": "12:00 am",
+                    "night": "12:00 am"
+                }
+
+                 
                 
