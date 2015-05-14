@@ -219,5 +219,31 @@ HOST: http://polls.apiblueprint.org/
                     "day": "6/18/2015"
                 }
 
+## tokenRegister [/tokenRegister/{CityID}]
+### Registering the device token [POST]
+
                  
++ Request (application/json)
+
+            {   "deviceToken": "123456ergerg", 
+                "deviceType": "ios"}
+
++ Response 202 (application/json)
+
+    + Headers
+
+            Location: /tokenRegister
+
+    + Body
+
+            {
+                "success": true,
+                "error": 0,
+                "message": "",
+                "data": ""
+            }
+
+                 
+                 
+            
                 
