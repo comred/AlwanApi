@@ -3,73 +3,79 @@ HOST: http://polls.apiblueprint.org/
 
 # Alwan App
 
-
-
-## getInit [/getInit]
+## getInit [api/getInit]
 ### Getting Beginning Data[GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getInit
+            Location: api/getInit
 
     + Body
 
                 {
                     "cityList":     [
                         {
-                            "CityID": 12,
-                            "GermanName": "ggggg",
-                            "ArabicName": "بببببب"
+                            "cityId": 12,
+                            "germanName": "ggggg",
+                            "arabicName": "بببببب"
                         },
                         {
-                            "CityID": 12,
-                            "GermanName": "ggggg",
-                            "ArabicName": "بببببب"
+                            "cityId": 12,
+                            "germanName": "ggggg",
+                            "arabicName": "بببببب"
                         }
                     ],
                    "languageList":  [
                         {
-                            "ID": 12,
-                            "Language": "بابابابابابااب"
+                            "languageId": 12,
+                            "language": "بابابابابابااب"
                         },
                         {
-                            "ID": 12,
-                            "Language": "باباباباباباب"
+                            "languageId": 12,
+                            "language": "باباباباباباب"
                         }
                     ],
                     "mailReceivers": [
                         {
-                            "ID": 12,
-                            "Email": "بابابابابابااب"
+                            "id": 12,
+                            "email": "بابابابابابااب"
                         },
                         {
-                            "ID": 12,
-                            "Email": "باباباباباباب"
+                            "id": 12,
+                            "email": "باباباباباباب"
                         }
                     ],
                     "mailCC": [
                         {
-                            "ID": 12,
-                            "Email": "باباباباباباباب"
+                            "id": 12,
+                            "email": "باباباباباباباب"
                         },
                         {
-                            "ID": 12,
-                            "Email": "باباباباباباباب"
+                            "id": 12,
+                            "email": "باباباباباباباب"
                         }
                     ]
                 }
                 
                 
-## getFullData [/getFullData/{LanguageID}]
+## getFullData [api/getFullData/{languageId}]
+
+This method has the following attributes:
+
++ languageId
+
++ Parameters
+    + languageId (required, int`) ... languageId in the form of an integer --> 1, 2 ...
+
 ### Getting The Full Data Related to the Language [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getFullData/2
+            Location: api/getFullData/2
 
     + Body   
                 
@@ -148,14 +154,26 @@ HOST: http://polls.apiblueprint.org/
             }
             
             
-## getPrayerTimes [/getPrayerTimes/{yearNumber}/{cityId}/{monthId}]
+## getPrayerTimes [api/getPrayerTimes/{yearNumber}/{cityId}/{monthId}]
+
+This method has the following attributes:
+
++ yearNumber
++ cityId
++ monthId
+
++ Parameters
+    + yearNumber (required, string`) ... the yearNumber in the form of a string --> "2015"
+    + cityId (required, int`) ... cityId in the form of an integer --> 1, 2 ...
+    + monthId (required, int`) ... monthId in the form of an integer --> 2, 12, ...
+
 ### Getting Prayer Times [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getPrayerTimes/2015/9
+            Location: api/getPrayerTimes/2015/9/5
 
     + Body
 
@@ -182,14 +200,22 @@ HOST: http://polls.apiblueprint.org/
                 }
 
                 
-## getRamadanTimes [/getRamadanTimes/{CityID}]
+## getRamadanTimes [api/getRamadanTimes/{cityId}]
+
+This method has the following attributes:
+
++ cityId
+
++ Parameters
+    + cityId (required, int`) ... cityId in the form of an integer --> 1, 2 ...
+
 ### Getting Ramadan Times [GET]
 
 + Response 202 (application/json)
 
     + Headers
 
-            Location: /getRamadanTimes/9
+            Location: api/getRamadanTimes/9
 
     + Body
 
@@ -219,7 +245,7 @@ HOST: http://polls.apiblueprint.org/
                     "day": "6/18/2015"
                 }
 
-## tokenRegister [/tokenRegister/{CityID}]
+## tokenRegister [api/tokenRegister]
 ### Registering the device token [POST]
 
                  
@@ -232,7 +258,7 @@ HOST: http://polls.apiblueprint.org/
 
     + Headers
 
-            Location: /tokenRegister
+            Location: api/tokenRegister
 
     + Body
 
